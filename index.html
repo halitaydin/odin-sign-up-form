@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+      
+          <img src="https://images.unsplash.com/photo-1657369062846-7e18bb02d063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Vader" />
+      
+        <div class="logo">
+          <img src="./svg/storm-trooper.svg" alt="storm-trooper">
+          <div>ODIN</div>
+        </div>
+        <div class="img-label">
+          photo by
+          <a href="https://unsplash.com/@maquilingskiswifty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Maquiling</a> on
+          <a href="https://unsplash.com/photos/LSnUMmRm7Sk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">unsplash</a> <br>
+          all icons from <a href="https://wikipedia.com">wikipedia</a>,<a href="https://starwars.fandom.com">starwars.fandom</a> and <a href="https://fontawesome.com">fontawesome</a>,
+          sound effects from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=94210">pixabay</a> and <a href="https://voicebot.su/en/">voicebot</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="header">
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+          <br /><br />
+          Sign up <i>now</i> and <span>choose your side.</span><br />
+          You <i>know</i> you want to.
+        </div>
+        <div class="sign-up-form">
+          <form action="https://httpbin.org/post" method="post" id="myForm">
+            <div class="form-header">Let's do this!</div>
+            <div class="two-columns">
+              <div>
+                <fieldset>
+                  <label for="first-name">first name</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                    tabindex="1"
+                    title=""
+                  />
+                  <span class="error"></span>
+                </fieldset>
+                <fieldset>
+                  <label for="e-mail">email</label>
+                  <input type="email" id="e-mail" name="e-mail" required tabindex="3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title=""/>
+                  <span class="error"></span>
+                </fieldset>
+                <fieldset>
+                  <label for="password">password</label>
+                  <input type="password" id="password" name="password" required tabindex="5" title="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+                  <span class="error"></span>
+                </fieldset>
+              </div>
+              <div>
+                <fieldset>
+                  <label for="last-name">last name</label>
+                  <input type="text" id="last-name" name="last-name" required tabindex="2" title=""/>
+                  <span class="error"></span>
+                </fieldset>
+                <fieldset>
+                  <label for="phone-number">phone number</label>
+                  <input type="text" id="phone-number" name="phone-number" required tabindex="4" title="" pattern="[0-9]+"/>
+                  <span class="error"></span>
+                </fieldset>
+                <fieldset>
+                  <label for="confirm-password" >confirm password</label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    required
+                    tabindex="6"
+                    title=""
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  />
+                  <span class="error"></span>
+                </fieldset>
+              </div>
+            </div>
+            <div class="alliances" id="radio">
+              <fieldset>
+                <input
+                  type="radio"
+                  name="side"
+                  id="rebel"
+                  value="rebel"
+                  required
+                />
+                <label for="rebel" class="alliance">
+                  <svg viewBox="0 0 300 300">
+                    <use xlink:href="./svg/rebel-alliance.svg#rebel" />
+                  </svg>
+                  rebel alliance
+                </label>
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="side" id="empire" value="empire" />
+                <label for="empire" class="alliance">
+                  <svg viewBox="0 0 600 600.00006">
+                    <use xlink:href="./svg/galactic-empire.svg#empire" />
+                  </svg>
+                  galactic empire
+                </label>
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="side" id="jedi" value="jedi" />
+                <label for="jedi" class="alliance">
+                  <svg viewBox="0 0 590.60175 600">
+                    <use xlink:href="./svg/jedi-order.svg#jedi" />
+                  </svg>
+                  jedi order
+                </label>
+              </fieldset>
+              <fieldset>
+                <input
+                  type="radio"
+                  name="side"
+                  id="mandalorian"
+                  value="mandalorian"
+                />
+                <label for="mandalorian" class="alliance">
+                  <svg viewBox="0 0 300 300">
+                    <use xlink:href="./svg/mandalorian.svg#mandalorian" />
+                  </svg>
+                  manda lorian
+                </label>
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="side" id="sith" value="sith" />
+                <label for="sith" class="alliance">
+                  <svg viewBox="0 0 416 480">
+                    <use xlink:href="./svg/sith-empire.svg#sith" />
+                  </svg>
+                  sith empire
+                </label>
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="side" id="first" value="first" />
+                <label for="first" class="alliance">
+                  <svg viewBox="0 0 448 512">
+                    <use xlink:href="./svg/first-order.svg#first" />
+                  </svg>
+                  first order
+                </label>
+              </fieldset>
+            </div>
+            <div id="radio-error"><span class="error"></span></div>
+            <div class="footer">
+              <button id="btn" type="submit"><span class="create">Create Account</span></button>
+              <span>Already have an account? <a href="#">Log in</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <audio data-name="lightsaber" src="sounds/lightsaber.mp3"></audio>
+    <audio data-name="vader" src="sounds/vader.mp3"></audio>
+  </body>
+</html>

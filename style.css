@@ -1,0 +1,545 @@
+@font-face {
+  font-family: "star-wars";
+  src: url(./fonts/starjedi.ttf);
+}
+
+@font-face {
+  font-family: "aurebesh";
+  src: url(./fonts/aurebesh-bold.otf);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  position: absolute;
+  color: #dfdfdf;
+  font-family: aurebesh;
+  font-size: 3rem;
+  height: 5rem;
+  bottom: 10%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.logo div {
+  margin-top: 0.3125rem;
+}
+
+img {
+  height: 100vh;
+}
+
+.img-label {
+  position: absolute;
+  color: #dfdfdf;
+  font-family: monospace;
+  text-align: center;
+  font-size: 0.7rem;
+  bottom: 1%;
+}
+
+a {
+  color: inherit;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: star-wars;
+  width: 100%;
+  padding: 20px 50px 20px 50px;
+  background: linear-gradient(91deg, #000000, #212529, #343a40);
+  background-size: 180% 180%;
+  animation: content-animation 18s ease infinite;
+}
+
+@keyframes content-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  color: #dfdfdf;
+}
+
+.header span {
+  color: #e78518;
+  font-size: 1rem;
+}
+
+.sign-up-form {
+  color: #dfdfdf;
+}
+
+.form-header {
+  padding-bottom: 10px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  font-size: 0.8rem;
+  color: #e78518;
+}
+
+.two-columns fieldset {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+input:not([type="radio"]) {
+  height: 1.5rem;
+  font-size: 1rem;
+  margin: 10px 0 0 0;
+}
+
+#btn {
+  display: block;
+  width: 428px;
+  height: 40px;
+  padding-bottom: 4.5px;
+  font-family: star-wars;
+  text-decoration: none;
+  color: #e78518;
+  border-radius: 10px;
+  border: 2px solid #e78518;
+  background-color: #dfdfdf;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#btn span {
+  position: relative;
+  z-index: 2;
+}
+
+#btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #e78518;
+  transition: all 0.35s;
+}
+
+#btn:hover {
+  color: #dfdfdf;
+}
+
+#btn:hover:after {
+  width: 100%;
+}
+
+span {
+  font-size: 0.7rem;
+}
+
+.create {
+  font-size: 1rem;
+}
+
+span a {
+  color: #e78518;
+}
+
+input {
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  background-color: #dfdfdf;
+  outline: none;
+}
+
+input:focus {
+  border-color: #e78518;
+  box-shadow: 0 0 10px #e78518;
+}
+
+input:valid:focus {
+  border-color: #e78518;
+  box-shadow: 0 0 10px #e78518;
+}
+
+.invalid {
+  border-color: #ff0000 !important;
+  box-shadow: 0 0 10px #ff0000 !important;
+}
+
+.invalidRadio {
+  fill: #ff0000;
+  color: #ff0000;
+}
+
+/* Input radio style */
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:hover ~ label {
+  transition: all 0.5s ease-in-out;
+  color: #e78518;
+}
+
+input[type="radio"]:checked ~ label {
+  color: #e78518;
+}
+
+input[type="radio"]:hover ~ .alliance svg {
+  transition: all 0.5s ease-in-out;
+  fill: #e78518;
+}
+
+input[type="radio"]:checked ~ .alliance svg {
+  fill: #e78518;
+}
+
+svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  text-align: center;
+  fill: #dfdfdf;
+}
+
+label {
+  cursor: pointer;
+}
+
+.alliance {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+
+.alliances {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  margin: 20px 0 0 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.error {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  color: #ff0000;
+  margin-top: 5px;
+  height: 0.5rem;
+  width: 200px;
+  font-size: 0.5rem;
+}
+
+#radio-error {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#radio-error span {
+  margin: 0;
+}
+
+fieldset {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1280px) {
+  .header,
+  .form-header,
+  .header span,
+  input[type="radio"] ~ label {
+    font-size: 0.8rem;
+  }
+
+  .alliances {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .alliance {
+    width: 60px;
+  }
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  input[type="radio"] ~ label {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .alliance {
+    width: 40px;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  input[type="radio"] ~ label {
+    font-size: 0.5rem;
+  }
+
+  .two-columns {
+    column-gap: 20px;
+  }
+
+  .alliances {
+    margin: 0;
+  }
+
+  #radio-error {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-height: 590px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 415px) {
+  .content {
+    padding: 0;
+    height: 99vh;
+    background-image: url("https://images.unsplash.com/photo-1657369062846-7e18bb02d063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-repeat: no-repeat;
+  }
+
+  .header,
+  .form-header {
+    padding: 10px;
+  }
+
+  #btn {
+    width: 400px;
+  }
+
+  .two-columns {
+    flex-wrap: nowrap;
+    column-gap: 5px;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  #btn {
+    width: 300px;
+  }
+
+  .two-columns input, .error {
+    width: 150px;
+  }
+
+  .alliances {
+    column-gap: 15px;
+  }
+
+  .alliance {
+    width: 40px;
+  }
+
+  svg {
+    width: 40px;
+    height:40px;
+  }
+
+  .header, .two-columns, .form-header, .alliances, .footer, #radio-error {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .header, .header span, .form-header {
+    font-size: 10px;
+  }
+
+  input[type="radio"] ~ label {
+    font-size: 8px;
+  }
+}
