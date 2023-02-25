@@ -478,7 +478,7 @@ fieldset {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 430px) {
   .content {
     padding: 0;
     height: 99vh;
