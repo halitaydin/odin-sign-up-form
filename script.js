@@ -26,7 +26,7 @@ const inputValidations = () => {
           ? (span[4].textContent = "")
           : (span[4].textContent = "*only numbers");
       }
-      if (validations[2].value !== "" && validations[5].value !== "") {
+      if (validations[2].value !== "") {
         validations[2].value === validations[5].value
           ? ((span[2].textContent = ""), (span[5].textContent = ""))
           : ((span[2].textContent = "*password mismatch"),
